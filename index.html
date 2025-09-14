@@ -17,76 +17,76 @@
   >
 
     <!-- Marker 1: Video -->
-    <a-marker type="pattern" url="./pattern-h.patt">
+    <a-marker type="pattern" url="pattern-h.patt">
       <a-video
-        src="./a.mp4"
-        width="7"
-        height="5"
+        src="a.mp4"
+        width="5"
+        height="3"
         position="0 0 0"
         rotation="-90 0 0"
-        autoplay="true"
-        loop="true"
-        muted="true"
-        playsinline="true"
+        autoplay
+        loop
+        muted
+        playsinline
         preload="auto"
       ></a-video>
     </a-marker>
 
     <!-- Marker 2: Image -->
-    <a-marker type="pattern" url="./KP.patt">
+    <a-marker type="pattern" url="KP.patt">
       <a-image
-        src="./komal.png"
-        width="7"
-        height="5"
+        src="komal.png"
+        width="5"
+        height="3"
         position="0 0 0"
         rotation="-90 0 0"
       ></a-image>
     </a-marker>
-
+    
     <!-- Marker 3: Video -->
-    <a-marker type="pattern" url="./UT.patt">
+    <a-marker type="pattern" url="UT.patt">
       <a-video
-        src="./b.mp4"
-        width="8"
-        height="6"
+        src="b.mp4"
+        width="6"
+        height="4"
         position="0 0 0"
         rotation="-90 0 0"
-        autoplay="true"
-        loop="true"
-        muted="true"
-        playsinline="true"
+        autoplay
+        loop
+        muted
+        playsinline
         preload="auto"
       ></a-video>
     </a-marker>
 
     <!-- Marker 4: Video -->
-    <a-marker type="pattern" url="./SG.patt">
+    <a-marker type="pattern" url="SG.patt">
       <a-video
-        src="./c.mp4"
-        width="7"
-        height="5"
+        src="c.mp4"
+        width="5"
+        height="3"
         position="0 0 0"
         rotation="-90 0 0"
-        autoplay="true"
-        loop="true"
-        muted="true"
-        playsinline="true"
+        autoplay
+        loop
+        muted
+        playsinline
         preload="auto"
       ></a-video>
     </a-marker>
 
-    <!-- Hiro preset marker -->
+    <!-- Marker 5: Hiro preset -->
     <a-marker preset="hiro">
       <a-video
-        src="./SRP.mp4"
-        width="7"
-        height="5"
+        src="SRP.mp4"
+        width="5"
+        height="3"
         position="0 0 0"
         rotation="-90 0 0"
-        autoplay="true"
-        loop="true"
-        muted="true"
-        playsinline="true"
+        autoplay
+        loop
+        muted
+        playsinline
         preload="auto"
       ></a-video>
     </a-marker>
@@ -94,5 +94,12 @@
     <!-- AR Camera -->
     <a-entity camera></a-entity>
   </a-scene>
+
+  <script>
+    // Fix mobile autoplay policy
+    document.body.addEventListener("click", () => {
+      document.querySelectorAll("video").forEach(v => v.play());
+    });
+  </script>
 </body>
 </html>
